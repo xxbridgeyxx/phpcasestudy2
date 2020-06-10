@@ -27,7 +27,7 @@
         </ul>
     </div>
     <div class="dropdown">
-        <button class="dropbtn"><img src="../images/drpdwn.png" height="25" width="25"/></button>
+        <button class="><img src="../images/drpdwn.png" height="25" width="25"/></button>
         <div class="dropdown-content">
             <a href="lizardpage.html">Lizard button</a>
             <a href="snakepage.html">Snake button</a>
