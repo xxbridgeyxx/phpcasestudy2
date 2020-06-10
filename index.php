@@ -9,8 +9,8 @@
 
 </head>
 <body>
-<?php include_once "header.php"
-include_once "ABOUTUS.php"?>
+<?php include_once "header.php";
+?>
    <div id="homepageDiv"> <h1>WetLandzzzzz</h1>
 
     <button onclick="typeWriter()">Click me</button>
@@ -19,9 +19,8 @@ include_once "ABOUTUS.php"?>
 
 
 
-    <footer class="footer">
-    <h2>&copy; Unitec Instiute of Technology</h2>
-</footer>
+<?php include_once "footer.php"
+?>
 
 </body>
 </html>
