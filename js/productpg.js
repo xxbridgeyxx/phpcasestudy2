@@ -14,6 +14,7 @@ function typeWriter() {
 
 //add product to cart
 function addProductToCart(e) {
+    console.log("click")
     cart = $("#rightDiv");
     name1 = $(e).attr("name");
     price = $(e).attr("price");
