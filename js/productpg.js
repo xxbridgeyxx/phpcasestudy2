@@ -15,7 +15,7 @@ total = 0;
 //add product to cart
 function addProductToCart(e) {
     console.log("click")
-    cart = $("#rightDiv");
+    cart = $("#cart");
     name1 = $(e).attr("name");
     price = $(e).attr("price");
     qty = $(e).prev().val();
@@ -48,7 +48,7 @@ function invoice() {
 
     //Take everything from shopping cart
     $("#invoicePlace").empty();
-    $("#invoicePlace").append($("#rightDiv").children());
+    $("#invoicePlace").append($("#cart").children());
     $("#invoicePlace").append("<p>Total: "+total+"</p>");
 }
 

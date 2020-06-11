@@ -52,6 +52,7 @@
     </div>
     <div id="rightDiv">
         <h2>Cart</h2>
+        <div id="cart"></div>
         <button id="checkOut" onclick="invoice()">Check out</button>
     </div>
 </main>
