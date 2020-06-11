@@ -47,28 +47,9 @@ function invoice() {
 
 
     //Take everything from shopping cart
-    cart = document.getElementById("rightDiv");
-    items = document.getElementsByClassName("orderedProducts");
-    //invoicePlace is the place we add items in
-    invoicePlace = document.getElementById("invoicePlace");
-    i = 0;
-    text = "<h2>Invoice</h2>";
-    while (i<items.length){
-        text += "<p>"+items[i].innerHTML+"</p>";
-        i++;
-    }
-
-    //calculate total
-    total = 0;
-    i = 0;
-    prices = document.getElementsByClassName("price");
-    while (i<prices.length){
-        console.log(prices[i].innerText);
-        total += Number(prices[i].innerText);
-        i++;
-    }
-    text += "<p>Total: $"+total+"</p>";
-    invoicePlace.innerHTML = text;
+    $("#invoicePlace").empty();
+    $("#invoicePlace").append($("#rightDiv").children());
+    $("#invoicePlace").append("<p>Total: "+total+"</p>");
 }
 
 function showBtnPrice(e) {
