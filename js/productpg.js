@@ -11,7 +11,7 @@ function typeWriter() {
     }
 }
 
-
+total = 0;
 //add product to cart
 function addProductToCart(e) {
     console.log("click")

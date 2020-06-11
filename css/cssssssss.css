@@ -2,8 +2,9 @@
 * {
     margin: 2px;
     padding: 2px;
-
 }
+
+.navLinks li {display:inline;}
 
 html, body {
     height: 100%;
