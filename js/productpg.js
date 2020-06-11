@@ -13,70 +13,14 @@ function typeWriter() {
 
 
 //add product to cart
-function addProductToCart(buttonID) {
-    cart = document.getElementById("rightDiv");
-    switch (buttonID) {
-        case "addFlakes":
-            qty = document.getElementById("flakeQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Flakes: "+qty+" Price: <strong class='price'>" +(50*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-        case "addWeed":
-            qty = document.getElementById("weedQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Weed: "+qty+" Price: <strong class='price'>"+(20*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-        case "addPebbles":
-            qty = document.getElementById("pebbleQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Pebbles: "+qty+" Price: <strong class='price'>"+(30*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-        case "addRocks":
-            qty = document.getElementById("rockQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Rock: "+qty+" Price: <strong class='price'>"+(59.69*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
+function addProductToCart(e) {
+    cart = $("#rightDiv");
+    name1 = $(e).attr("name");
+    price = $(e).attr("price");
+    qty = $(e).prev().val();
 
-        case "addBird":
-            qty = document.getElementById("birdQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Bird: "+qty+" Price: <strong class='price'>"+(50.00*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-
-        case "addEgg":
-            qty = document.getElementById("eggQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Egg: "+qty+" Price: <strong class='price'>"+(16.60*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-
-        case "addFish":
-            qty = document.getElementById("fishQty").value;
-            addHTML = document.createElement("p");
-            addHTML.className="orderedProducts";
-            addHTML.innerHTML = "Fish: "+qty+" Price: <strong class='price'>"+(30.00*Number(qty)) +"</strong>";
-            console.log(addHTML);
-            cart.insertBefore(addHTML, document.getElementById("checkOut"));
-            break;
-
-    }
+    cart.append("<p>Name: "+name1+"  Price: "+Number(price)*Number(qty) +"</p>");
+    total = total + Number(price)*Number(qty);
 }
 //Popup Invoice
 

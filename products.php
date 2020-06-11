@@ -32,7 +32,8 @@
 
                     <input placeholder="qty" type="number" id="flakeQty">
 
-                    <button id="addFlakes"  onclick="addProductToCart(this.id)">
+                    <button name="<?php echo $product->name; ?>"
+                            price = "<?php echo $product->price; ?>"  onclick="addProductToCart(this)">
                         Add to Cart
                     </button>
 
